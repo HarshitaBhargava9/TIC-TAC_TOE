@@ -1,28 +1,121 @@
-"# TIC-TAC-TOE" 
+# 🎮 Tic Tac Toe Game in C
 
-🎮 Tic Tac Toe Game in C
-A simple and fun Tic Tac Toe game built in the C programming language where you (the player) play against the computer.
-The game runs in the terminal and uses basic C concepts like arrays, loops, and conditionals — perfect for beginners!
+A simple command-line Tic Tac Toe game built using C, where a player competes against the computer. The game features a clean interface, input validation, and basic AI (random moves).
 
+---
 
-🧠 Features
-👨‍💻 Single Player Mode – Play against the computer.
-🧩 Smart Move Logic – Computer picks random available cells.
-🎲 Automatic Winner Detection – Checks all rows, columns, and diagonals.
-💬 Friendly Console Interface – Includes instructions, input prompts, and victory messages.
-🕹️ Replay Anytime – Quick and lightweight, no external libraries needed.
-🧩 How It Works
+## 🚀 Features
 
-The game uses a 3x3 board represented by a 2D array.
-The player uses ‘X’ and the computer uses ‘O’.
-Turns alternate until one wins or the board is full (a tie).
-The game declares the winner or a draw message at the end.
-Code Overview
-Function	Description
-resetBoard()	Clears the game board before each new game
-printBoard()	Displays the board in a 3×3 grid
-checkFreeSpaces()	Checks how many empty cells are left
-playerMove()	Gets the player's move from input
-computerMove()	Makes a random valid move for the computer
-checkWinner()	Determines if someone has won
-printWinner()	Prints the result message (win/lose/tie)
+* 🧑 Player vs Computer gameplay
+* 🎲 Computer makes random valid moves
+* 🧠 Game logic for win/draw detection
+* 📋 Clean 3x3 board display
+* ⚠️ Input validation for invalid moves
+* 🔁 Continuous gameplay until win or draw
+
+---
+
+## 🛠️ Tech Stack
+
+* Language: **C**
+* Libraries Used:
+
+  * `stdio.h` → Input/Output operations
+  * `stdlib.h` → Random number generation
+  * `time.h` → Seeding randomness
+  * `ctype.h` → Character handling
+
+---
+
+## 📦 How to Run
+
+### 1️⃣ Compile the Code
+
+```bash
+gcc Game.c -o tic_tac_toe
+```
+
+### 2️⃣ Run the Program
+
+```bash
+./tic_tac_toe
+```
+
+---
+
+## 🎯 How to Play
+
+* The board is a **3×3 grid**
+* You play as **X**
+* Computer plays as **O**
+* Enter row and column numbers (1–3) to make a move
+
+### 🧾 Example Input
+
+```
+Enter row #(1-3): 1
+Enter column #(1-3): 2
+```
+
+---
+
+## 🧩 Game Flow
+
+1. Board initializes empty
+2. Player makes the first move
+3. Computer makes a move
+4. Game checks for:
+
+   * Winner
+   * Draw (no free spaces)
+5. Loop continues until game ends
+
+---
+
+## 🏆 Winning Conditions
+
+* Any row, column, or diagonal with the same symbol wins
+* If all spaces are filled with no winner → **Draw**
+
+---
+
+## ⚠️ Error Handling
+
+* Prevents overwriting occupied cells
+* Ensures valid row and column input range (1–3)
+* Handles full board (draw condition)
+
+---
+
+## 📌 Future Improvements
+
+* Add smarter AI (Minimax algorithm)
+* Multiplayer mode (Player vs Player)
+* GUI version (using SDL / GTK)
+* Score tracking system
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+* Fork the repo
+* Improve logic/UI
+* Submit a pull request
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+## 💡 Author
+
+**Harshita Bhargava**
+
+---
+
+⭐ If you like this project, consider giving it a star!
